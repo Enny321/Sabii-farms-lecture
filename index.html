@@ -196,14 +196,13 @@ footer p{font-size:13px;color:var(--ink-soft)}
     <div class="offer" id="offer-unlocked" style="display:none;">
       <h2>Ready to Build Your Farm Properly?</h2>
       <p>Now that you've seen how the pieces fit together, here's the next step to put it into practice on your own farm.</p>
-      <a href="#" class="cta-btn" id="offer-cta">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
-          <path d="M12 3C7.03 3 3 7.03 3 12c0 1.77.51 3.42 1.4 4.81L3 21l4.34-1.37A8.96 8.96 0 0 0 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9Z"
-            stroke="#06301C" stroke-width="1.6"/>
-          <path d="M8.5 8.7c.15-.4.55-.4.9-.4h.6c.2 0 .4.1.5.4l.6 1.5c.1.25 0 .45-.15.6l-.5.5c.35.75 1.05 1.45 1.8 1.8l.5-.5c.15-.15.35-.25.6-.15l1.5.6c.3.1.4.3.4.5v.6c0 .35 0 .75-.4.9-2.9 1.05-6.4-2.45-7.45-5.35Z"
-            fill="#06301C"/>
+      <p style="font-size:13px;color:var(--ink-soft);margin:-6px 0 16px;">The program is now ₦16,650, and the price could increase soon. Enroll now to secure the current price.</p>
+      <a href="https://selar.com/profit-pond" class="cta-btn" id="offer-cta">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" stroke="#06301C" stroke-width="1.6"/>
+          <path d="M8 12h8m-4-4 4 4-4 4" stroke="#06301C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        Show Me the Next Step
+        Enroll in the Program Now
       </a>
     </div>
   </div>
@@ -541,16 +540,8 @@ footer p{font-size:13px;color:var(--ink-soft)}
     event.preventDefault();
   });
 
-  // WhatsApp offer CTA.
-  var OFFER_PHONE = '2348161537667';
-  var OFFER_MESSAGE =
-    'Hello Sabii Farms, I’m ready to join the program. ' +
-    'Kindly send me the payment details so I can make my payment now.';
-
-  var OFFER_LINK = 'https://wa.me/' + OFFER_PHONE +
-    '?text=' + encodeURIComponent(OFFER_MESSAGE);
-
-  offerCta.setAttribute('href', OFFER_LINK);
+  // Program enrollment CTA.
+  offerCta.setAttribute('href', 'https://selar.com/profit-pond');
   offerCta.setAttribute('target', '_blank');
   offerCta.setAttribute('rel', 'noopener');
 
@@ -559,7 +550,7 @@ footer p{font-size:13px;color:var(--ink-soft)}
   });
 
   /*
-   * Lead is intentionally NOT fired on the WhatsApp click.
+   * Lead is intentionally NOT fired on the enrollment click.
    * If you later add a genuine lead-completion action on this page,
    * call trackEvent('Lead', {content_name: 'webinar_lead'}).
    */
